@@ -94,3 +94,21 @@ void Ball::manageCollisionWith(sf::RenderWindow& window)
 	}
 
 }
+/*
+void Ball::manageCollisionWith(Player & player)
+{
+	sf::FloatRect ballRect;
+	ballRect.left = position.x;
+	ballRect.top = position.y;
+	ballRect.width = 2 * radius;
+	ballRect.height = 2 * radius;
+
+	sf::FloatRect playerRect(player.getPosition().x, player.getPosition().y, player.getSize().x, player.getSize().y);
+
+	if (ballRect.intersects(playerRect))
+	{
+		float relativeX = position.x - player.getPosition().x;
+
+	}
+}
+*/
