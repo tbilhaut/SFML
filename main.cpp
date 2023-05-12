@@ -27,7 +27,7 @@ int main(int argc, char** argv)
 
 
 	sf::Clock clock;
-	sf::Vector3f xFactor(10, 20, 30);
+	sf::Vector3f xFactor(10, 30, 30);
 	float ellapsedTime = 0;
 
 	std::vector<Brick> bricks;
