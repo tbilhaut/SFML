@@ -1,5 +1,4 @@
 #pragma once
-
 #include <SFML/Graphics.hpp>
 
 class Ball
@@ -14,6 +13,7 @@ private:
 	static bool isRandInitialized;
 	double randomizeAngle();
 	void setAngle(double angle);
+
 public:
 	Ball(int x, int y, int radius, float speed);
 	~Ball();
@@ -23,8 +23,5 @@ public:
 	void setSpeed(float newSpeed);
 	void setPosition(sf::Vector2f newPosition);
 	void setDirection(sf::Vector2f newDirection);
-
 	void manageCollisionWith(sf::RenderWindow& window);
-
 };
-
