@@ -4,7 +4,7 @@ Brick::Brick(float x, float y)
 {
     shape.setPosition(x, y);
     shape.setSize(sf::Vector2f(BRICK_WIDTH, BRICK_HEIGHT));
-    shape.setFillColor(sf::Color::Green);
+    shape.setFillColor(sf::Color::Yellow);
     shape.setOrigin(BRICK_WIDTH / 2.f, BRICK_HEIGHT / 2.f);
     destroyed = false;
 }
@@ -30,4 +30,8 @@ void Brick::destroy()
 sf::FloatRect Brick::getBounds()
 {
     return shape.getGlobalBounds();
+}
+bool Brick::checkCollision(sf::FloatRect ballBounds)
+{
+    return shape.getGlobalBounds().intersects(ballBounds);
 }
